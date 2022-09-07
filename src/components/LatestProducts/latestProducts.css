@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.product_carousel{
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 4px 0;
+}
+.product_cards{
+    display: flex;      
+    overflow-x: hidden;
+    padding: 0 10px;
+    scroll-behavior: smooth;
+    margin-left: 1rem;
+}
+.pre-btn, .nxt-btn{
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+    width: 30px;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+.nxt-btn{
+    right: 0;
+}
+.pre-btn p, .nxt-btn p{
+    font-size: xx-large;
+    width: 40px;
+    background: transparent;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+.product_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

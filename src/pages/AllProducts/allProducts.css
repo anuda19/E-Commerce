@@ -1,0 +1,14 @@
+.all_products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all_product_header{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+.all_product_header select{
+    border-radius: .5rem;
+    height: 2rem;
+    outline: aqua;
+}

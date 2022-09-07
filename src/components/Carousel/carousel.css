@@ -1,0 +1,37 @@
+.image_carousel{
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 2px;
+    top: 2rem;
+}
+.image-container{
+    display: flex;      
+    overflow-x: hidden;
+    padding: 0 10px;
+    scroll-behavior: smooth;
+}
+.image-container img{
+    height: 300px;
+}
+.prev-btn, .next-btn{
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+    width: 40px;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(231, 207, 207);
+    display: flex;
+    align-items: center;
+}
+.next-btn{
+    right: 0;
+}
+.prev-btn p, .next-btn p{
+    font-size: xx-large;
+    width: 40px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+}
