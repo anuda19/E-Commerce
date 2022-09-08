@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { CartState } from "../../Context/ProductState";
 import SingleProductCard from "../SingleProductCard/SingleProductCard";
 
@@ -10,9 +10,9 @@ const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
     <div className="product_carousel my-5">
       <div className="product_header my-2">
         <h4 className="mx-5 p-2">{header}</h4>
-      <Link to={`/all-products/${prodCat}`} className="mx-5 px-2">
+      {/* <Link to={`/all-products/${prodCat}`} className="mx-5 px-2">
         View All
-      </Link>
+      </Link> */}
       </div>
       <button className="pre-btn" onClick={prevBtn}>
         <p>&lt;</p>
