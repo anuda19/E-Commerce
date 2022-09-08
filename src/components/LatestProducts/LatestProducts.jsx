@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductsByCat from "../ProductsByCat/ProductsByCat";
 import "./latestProducts.css";
 
@@ -17,7 +16,7 @@ const LatestProducts = () => {
   return (
     <>
       <div className="amazon_products">
-      <a href="https://www.amazon.in/OnePlus-Bluetooth-Wireless-Earphones-Bombastic/dp/B09TVVGXWS?crid=1HS8TE0GEWARC&keywords=oneplus%2Bbullets%2Bwireless&qid=1662552991&sprefix=oneplus%2Bbullets%2Bwireless%2B%2Caps%2C357&sr=8-2&th=1&linkCode=li2&tag=anurag00ab-21&linkId=1620445254553870a0940d5e3e5a37e9&language=en_IN&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09TVVGXWS&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=anurag00ab-21&language=en_IN"  /></a>
+      <a href="https://www.amazon.in/OnePlus-Bluetooth-Wireless-Earphones-Bombastic/dp/B09TVVGXWS?crid=1HS8TE0GEWARC&keywords=oneplus%2Bbullets%2Bwireless&qid=1662552991&sprefix=oneplus%2Bbullets%2Bwireless%2B%2Caps%2C357&sr=8-2&th=1&linkCode=li2&tag=anurag00ab-21&linkId=1620445254553870a0940d5e3e5a37e9&language=en_IN&ref_=as_li_ss_il" ><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09TVVGXWS&Format=_SL160_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=anurag00ab-21&language=en_IN" alt="Not Supprted" /></a>
     <h4 className="mx-2">Oneplus Bluetooth Wireless in Earphones with Mic</h4>
     <a href="https://amzn.to/3x4RoOO"><button className="btn btn-primary mx-2">Buy Now</button></a>
       </div>

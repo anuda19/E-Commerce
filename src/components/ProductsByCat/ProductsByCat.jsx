@@ -24,9 +24,7 @@ const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
       <div className="product_cards">
         {newData
           ?.filter((val) => {
-            if (val.category === prodCat) {
-              return val;
-            }
+            return val.category === prodCat;
           })
           .map((prod) => {
             return <SingleProductCard prod={prod} key={prod.id} />;
