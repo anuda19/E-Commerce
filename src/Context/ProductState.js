@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect, useReducer, useState } from 'react'
+import React, { createContext, useContext, useEffect, useReducer } from 'react'
 // import {faker} from '@faker-js/faker'
 import { getProducts } from '../Api/productsApi'
-import {apiReducer, cartReducer} from './Reducer'
+import {apiReducer} from './Reducer'
 
 
 const Cart = createContext()

@@ -5,6 +5,7 @@ import SingleProductCard from "../SingleProductCard/SingleProductCard";
 
 const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
   const { products } = CartState();
+  const newData = [...products]
   return (
     <div className="product_carousel my-5">
       <div className="product_header my-2">
@@ -21,7 +22,7 @@ const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
       </button>
       <hr />
       <div className="product_cards">
-        {products
+        {newData
           ?.filter((val) => {
             if (val.category === prodCat) {
               return val;
