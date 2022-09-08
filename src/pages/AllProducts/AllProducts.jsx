@@ -9,6 +9,7 @@ const AllProducts = () => {
   const params = useParams();
   const { categories } = params;
   const { products, dispatch } = CartState();
+  const allData = [...products]
 
   const sortByPrice = (e) => {
     if (e.target.value === "lowToHigh") {
@@ -42,10 +43,11 @@ const AllProducts = () => {
       </div>
       <hr />
       <div className="all_products my-5">
-        {products.map((prod) => {
+        {allData.map((prod) => {
           if (prod.category === categories) {
             return <SingleProductCard prod={prod} />;
           }
+          return prod;
         })}
       </div>
     </>
