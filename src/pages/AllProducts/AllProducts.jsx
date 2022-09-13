@@ -8,24 +8,24 @@ import "./allProducts.css";
 const AllProducts = () => {
   const params = useParams();
   const { categories } = params;
-  const { products, dispatch } = CartState();
-  const allData = [...products]
+  const { amazonProducts, dispatch } = CartState();
+  const allData = [...amazonProducts]
 
   const sortByPrice = (e) => {
     if (e.target.value === "lowToHigh") {
       dispatch({
         type: "SORT",
-        sort: products.sort((a, b) => a.price - b.price),
+        sort: amazonProducts.sort((a, b) => a.price - b.price),
       });
     } else if (e.target.value === "highToLow") {
       dispatch({
         type: "SORT",
-        sort: products.sort((a, b) => b.price - a.price),
+        sort: amazonProducts.sort((a, b) => b.price - a.price),
       });
     } else if (e.target.value === "rating") {
       dispatch({
         type: "SORT",
-        sort: products.sort((a, b) => b.rating.rate - a.rating.rate),
+        sort: amazonProducts.sort((a, b) => b.rating.rate - a.rating.rate),
       });
     }
   };

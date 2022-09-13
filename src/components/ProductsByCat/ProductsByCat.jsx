@@ -1,11 +1,22 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { CartState } from "../../Context/ProductState";
 import SingleProductCard from "../SingleProductCard/SingleProductCard";
 
-const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
-  const { products } = CartState();
-  const newData = [...products]
+const ProductsByCat = ({ header, prodCat, showIcon }) => {
+  const { amazonProducts } = CartState();
+  const newData = [...amazonProducts]
+
+  let box = document.querySelector(".product_cards");
+  const prevBtn = () => {
+    let width = box.clientWidth;
+    box.scrollLeft = box.scrollLeft - width;
+  };
+  const nextBtn = () => {
+    let width = box.clientWidth;
+    box.scrollLeft = box.scrollLeft + width;
+  }
+
+
   return (
     <div className="product_carousel my-5">
       <div className="product_header my-2">
@@ -27,7 +38,7 @@ const ProductsByCat = ({ header, nextBtn, prevBtn, prodCat }) => {
             return val.category === prodCat;
           })
           .map((prod) => {
-            return <SingleProductCard prod={prod} key={prod.id} />;
+            return <SingleProductCard prod={prod} key={prod._id} showIcon={showIcon}/>;
           })}
       </div>
     </div>

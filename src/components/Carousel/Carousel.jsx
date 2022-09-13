@@ -13,11 +13,11 @@ const Carousel = ({images}) => {
   //   }, 2000);
 
   const prevBtn = ()=>{
-    let width = box.offsetWidth;
+    let width = box.clientWidth;
     box.scrollLeft = box.scrollLeft - width;
   }
   const nextBtn = ()=>{
-    let width = box.offsetWidth;
+    let width = box.clientWidth;
     box.scrollLeft = box.scrollLeft + width;
   }
 

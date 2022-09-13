@@ -5,8 +5,9 @@
 }
 
 .product_image img{
-    width: 15rem;
+    width: 12rem;
     height: 10rem;
+    cursor: pointer;
 }
 .product_card{
     margin: 10px;
@@ -35,14 +36,18 @@
     font-weight: 600;
 }
 
-.rating{
-    background-color: rgb(4, 166, 166);
-    padding: .1rem .2rem;
-    border-radius: 5px;
-    color: white;
-}
 .title{
     display: flex;
     flex-wrap: wrap;
     width: 15rem;
+}
+.product_name h6{
+    cursor: pointer;
+}
+.img_icon{
+    display: flex;
+    justify-content: flex-end;
+    font-size: larger;
+    margin: 5px;
+    cursor: pointer;
 }

@@ -1,24 +1,16 @@
 import React, { createContext, useContext, useEffect, useReducer } from 'react'
-// import {faker} from '@faker-js/faker'
-import { getProducts } from '../Api/productsApi'
+import { getAmazonProducts, getProducts } from '../Api/productsApi'
 import {apiReducer} from './Reducer'
 
 
 const Cart = createContext()
 
 const ProductState = ({children}) => {
-
-    // const data= [...Array(30)].map(()=>({
-    //     id: faker.datatype.uuid(),
-    //     productName: faker.commerce.productName(),
-    //     price: faker.commerce.price(),
-    //     images: faker.image.food(1234, 2345, true),
-    //     fastDelivery: faker.datatype.boolean(),
-    // }))
     
     const [state, dispatch] = useReducer(apiReducer, {
       products:[],
-      cart:[]
+      cart:[],
+      amazonProducts:[]
     })
 
     useEffect(() => {
@@ -42,6 +34,26 @@ const ProductState = ({children}) => {
       })
     }
 
+    useEffect(() => {
+      getAmazonProduct()
+    }, [])
+    
+    const getAmazonProduct = ()=>{
+      getAmazonProducts().then(res=>{
+        const {data, status} = res;
+        if(status === 200){
+          console.log(data);
+          dispatch({
+            type: "GET_AMAZON_DATA",
+            payload:{
+              amazonProducts: data,
+            }
+          })
+        }
+      }).catch(err=>{
+        console.log(err);
+      })
+    }
     
 
   return (

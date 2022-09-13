@@ -1,8 +1,8 @@
 export const apiReducer = (state, action)=>{
     switch (action.type) {
-        case "GET_DATA":
+            case "GET_AMAZON_DATA":
             return {
-                ...state, products: action.payload.products
+                ...state, amazonProducts: action.payload.amazonProducts
             }
             case "ADD":
             return {
@@ -11,6 +11,10 @@ export const apiReducer = (state, action)=>{
             case "REMOVE":
             return {
                 ...state, cart:state.cart.filter((p)=>p.id!==action.payload.id)
+            }
+            case "REMOVE_PRODUCT":
+            return {
+                ...state, amazonProducts:state.amazonProducts.filter((p)=>p._id!==action.payload._id)
             }
             case "SORT":
             return {
