@@ -1,6 +1,5 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import ProductState from './Context/ProductState';
 import Home from './pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
@@ -8,6 +7,7 @@ import Cart from './pages/Cart/Cart';
 import AllProducts from './pages/AllProducts/AllProducts';
 import ProductDeatils from './pages/ProductDetails/ProductDeatils';
 import Seller from './pages/Sellers/Seller';
+import './App.css';
 
 
 function App() {

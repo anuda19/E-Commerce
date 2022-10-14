@@ -8,6 +8,7 @@ const SellerEditModal = ({
   selectedProd,
   setSelectedProd,
 }) => {
+
   const handleChangeEdit = (e) => {
     const updatedProduct = { ...selectedProd };
     if (e.target.name === "title") {
@@ -24,14 +25,20 @@ const SellerEditModal = ({
     setSelectedProd(updatedProduct);
   };
 
-  const handleEditProduct = async () => {
-    const res = await editAmazonProducts(selectedProd._id, selectedProd);
-    const { status } = res;
+  const handleEditProduct =(id) => {
+    editAmazonProducts(selectedProd._id, selectedProd)
+    .then(res=>{
+        const { status } = res;
     if (status === 200) {
       console.log(status);
+      setSelectedProd({})
       setShowEditModal(false)
     }
+    }).catch(err=>{
+        console.log(err.message);
+    })
   };
+
   return (
     <div>
       <Modal show={showEditModal}>
@@ -85,7 +92,7 @@ const SellerEditModal = ({
             Close
           </button>
           <button className="btn btn-primary" 
-          onClick={handleEditProduct}>
+          onClick={()=>handleEditProduct(selectedProd._id)}>
             Update
           </button>
         </Modal.Footer>

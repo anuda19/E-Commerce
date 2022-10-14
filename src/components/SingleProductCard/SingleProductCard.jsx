@@ -73,7 +73,7 @@ const SingleProductCard = ({prod, showIcon}) => {
                 <h6 className='title'>{prod?.title}</h6>
               </div>
                 {cart.some((p)=>p._id===prod._id)?(
-                  <button className='remove_cart_btn' 
+                  <button className='remove_cart_btn btn-sm' 
                   onClick={()=>removeFromCart()}>
                   <MdDelete className='mx-2 mb-1'/>
                   Remove From Cart</button>
