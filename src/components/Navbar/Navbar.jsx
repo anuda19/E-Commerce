@@ -17,6 +17,9 @@ const Navbar = ({search, setSearch}) => {
         <input type="text" placeholder="Search" value={search} onChange={(e)=>setSearch(e.target.value)} />
         <FaSearch />
       </div>
+      <div className="seller">
+        <Link to='/seller'><h2>Seller</h2></Link>
+      </div>
       <div className="cart mx-2">
          <Link to='/cart'><h2>Cart<FaShoppingCart className="text-success"/>({cart.length})</h2></Link>
       </div>
