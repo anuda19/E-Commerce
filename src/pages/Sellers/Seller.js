@@ -10,7 +10,7 @@ const Seller = () => {
   return (
     <>
       <Navbar />
-      <div className="my-5">
+      <div className="">
         <button className="btn btn-primary" onClick={() => setShowModal(true)}>
           Add Product
         </button>
